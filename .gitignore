@@ -1,0 +1,50 @@
+# Python cache
+
+**pycache**/
+*.py[cod]
+
+# Virtual environment
+
+.venv/
+venv/
+
+# Environment variables
+
+.env
+
+# Jupyter
+
+.ipynb_checkpoints/
+
+# Data files - do not upload datasets
+
+data/raw/*
+data/processed/*
+data/external/*
+
+# Trained models
+
+models/*.pkl
+models/*.joblib
+models/*.h5
+models/*.pt
+models/*.json
+
+# MLflow
+
+mlruns/
+
+# IDE settings
+
+.vscode/
+.idea/
+
+# Logs
+
+*.log
+logs/
+
+# OS files
+
+.DS_Store
+Thumbs.db
