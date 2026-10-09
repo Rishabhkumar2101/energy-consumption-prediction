@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnergySense | Consumption Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#">
+            <span class="brand-icon">⚡</span>
+            Energy<span class="brand-accent">Sense</span>
+        </a>
+        <span class="status">
+            <span class="status-dot"></span>
+            ML Prediction System
+        </span>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <p class="eyebrow">SMART ENERGY ANALYTICS</p>
+            <h1>Predict energy.<br><span>Power smarter decisions.</span></h1>
+            <p class="subtitle">
+                Machine learning based appliance energy consumption prediction.
+            </p>
+        </section>
+
+        <section class="dashboard">
+            <div class="panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="section-label">PREDICTION INPUTS</p>
+                        <h2>Sensor readings</h2>
+                    </div>
+                    <span class="step-tag">01 / INPUT</span>
+                </div>
+
+                <p class="help">
+                    Sample values are prefilled. You can edit them before predicting.
+                </p>
+
+                <form id="prediction-form">
+                    <h3>Environment</h3>
+                    <div class="form-grid" id="environment-fields"></div>
+
+                    <h3>Time information</h3>
+                    <div class="form-grid" id="time-fields"></div>
+
+                    <h3>Recent consumption</h3>
+                    <div class="form-grid" id="lag-fields"></div>
+
+                    <details class="advanced">
+                        <summary>Advanced sensor readings</summary>
+                        <div class="form-grid" id="advanced-fields"></div>
+                    </details>
+
+                    <button id="predict-button" type="submit">
+                        ⚡ Predict energy consumption
+                    </button>
+                    <p id="form-message" class="message" role="status"></p>
+                </form>
+            </div>
+
+            <aside class="result-panel">
+                <p class="section-label">MODEL OUTPUT</p>
+                <h2>Your prediction</h2>
+
+                <div class="result-icon">⚡</div>
+                <p class="result-caption">Estimated appliance consumption</p>
+
+                <div class="result-value" id="result-value">
+                    -- <small>Wh</small>
+                </div>
+
+                <p id="result-message" class="result-message">
+                    Enter readings and run a prediction.
+                </p>
+
+                <div class="result-divider"></div>
+
+                <div class="result-meta">
+                    <span>Model</span>
+                    <strong>Linear Regression</strong>
+                </div>
+                <div class="result-meta">
+                    <span>API status</span>
+                    <strong id="api-status">Checking...</strong>
+                </div>
+
+                <p class="disclaimer">
+                    This result is a model estimate, not a real-time meter reading.
+                </p>
+            </aside>
+        </section>
+
+        <footer>
+            EnergySense · Energy Consumption Prediction Project
+        </footer>
+    </main>
+</body>
+</html>
